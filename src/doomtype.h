@@ -100,11 +100,20 @@
 
 #include <inttypes.h>
 
-#if defined(__cplusplus) || defined(__bool_true_false_are_defined)
+#if defined(__cplusplus)
 
 // Use builtin bool type with C++.
 
 typedef bool boolean;
+
+#elif defined(__bool_true_false_are_defined)
+
+// stdbool.h already made true/false macros, so the enum below can't be
+// declared. Keep boolean the same size as that enum (an int): files that
+// include stdbool.h first and files that don't must agree on the size of
+// every boolean global, or reads of them fault under WebAssembly.
+
+typedef int boolean;
 
 #else
 
