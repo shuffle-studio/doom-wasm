@@ -210,6 +210,8 @@ void F_Ticker (void)
 	finalecount = 0;
 	finalestage = F_STAGE_ARTSCREEN;
 	wipegamestate = -1;		// force a wipe
+	if (gameepisode == 1)
+	    printf("doom: 20, episode finished\n");
 	if (gameepisode == 3)
 	    S_StartMusic (mus_bunny);
     }

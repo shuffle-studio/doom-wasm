@@ -1100,6 +1100,7 @@ void M_QuitResponse(int key)
 {
     if (key != key_menu_confirm)
 	return;
+    printf("doom: 21, quit\n");
     if (!netgame)
     {
 	if (gamemode == commercial)

@@ -57,6 +57,19 @@ doom: 9, disconnected from server
 doom: 10, game started
 doom: 11, entering fullscreen
 doom: 12, client '%s' timed out and disconnected
+doom: 20, episode finished          (Episode 1 end text done; added for Go Deeper)
+doom: 21, quit                      (Quit confirmed in the menu; added for Go Deeper)
+```
+
+## Go Deeper build (Shuffle Studio)
+
+This fork builds the engine for the Go Deeper page on shufflestudio.io, with
+the Freedoom: Phase 1 levels (BSD 3-clause, https://freedoom.github.io).
+Changes from cloudflare/doom-wasm: flags updated for current Emscripten,
+`boolean` kept one size in every file, and the two stdout lines above.
+
+```
+./scripts/go-deeper.sh            # builds, then writes dist/go-deeper/<commit>/
 ```
 
 ## License
